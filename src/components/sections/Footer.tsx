@@ -25,7 +25,7 @@ export function Footer() {
             <a href="#" className="text-sm text-white/45 hover:text-white/70 transition-colors leading-snug">
               Política de Cookies
             </a>
-            <a href="#cta" className="text-sm text-white/45 hover:text-white/70 transition-colors leading-snug">
+            <a href="#cta" data-own-cta className="text-sm text-white/45 hover:text-white/70 transition-colors leading-snug">
               Falar com especialista
             </a>
           </nav>
@@ -37,6 +37,9 @@ export function Footer() {
         {/* Copyright */}
         <p className="text-center text-xs text-white/30 mt-6 leading-relaxed">
           © 2026 EasyJur. Todos os direitos reservados. · Mockup de referência, claims pendentes de validação.
+        </p>
+        <p className="text-center text-xs text-white/30 mt-1">
+          CNPJ: 00.000.000/0000-00
         </p>
 
       </div>

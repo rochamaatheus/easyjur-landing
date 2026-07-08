@@ -6,7 +6,7 @@ const cards = [
   {
     icon: Banknote,
     title: 'A folha te engole antes da primeira petição sair.',
-    body: 'Um júnior CLT custa de R$ 6 a 8 mil por mês com encargos, férias e 13° — fixo, todo mês, chova ou faça sol. Se a contratação der errado, você ainda paga a rescisão.',
+    body: 'Um júnior CLT custa de R$ 6 a 8 mil por mês com encargos, férias e 13°, fixo, todo mês, chova ou faça sol. Se a contratação der errado, você ainda paga a rescisão.',
   },
   {
     icon: TriangleAlert,
@@ -66,11 +66,11 @@ export function PainPoints() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.45, ease: EASE }}
-          className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-900 rounded-2xl p-6 flex items-start gap-4"
+          className="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 flex items-start gap-4"
         >
-          <CornerDownRight className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
-          <p className="text-sm sm:text-base text-emerald-900 dark:text-emerald-100 leading-relaxed font-medium">
-            Agora imagine esse volume entregue no prazo, no seu padrão, sem um nome novo na folha —
+          <CornerDownRight className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+          <p className="text-sm sm:text-base text-emerald-900 leading-relaxed font-medium">
+            Agora imagine esse volume entregue no prazo, no seu padrão, sem um nome novo na folha,
             cada peça nas mãos de um advogado ranqueado, não de um desconhecido do WhatsApp.
           </p>
         </motion.div>

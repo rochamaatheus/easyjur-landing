@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --font-sans: 'Plus Jakarta Sans Variable', sans-serif;
 
@@ -65,30 +63,6 @@
 
   --ink: #0c0c0c;
   --ink-soft: #16181d;
-}
-
-.dark {
-  --background: oklch(0.15 0.005 285);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.19 0.006 285);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.19 0.006 285);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.58 0.19 25.5);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.22 0.006 285);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.2 0.006 285);
-  --muted-foreground: oklch(0.68 0.01 285);
-  --accent: oklch(0.25 0.02 25);
-  --accent-foreground: oklch(0.75 0.13 25.5);
-  --destructive: oklch(0.6 0.22 27);
-  --border: oklch(0.27 0.006 285);
-  --input: oklch(0.27 0.006 285);
-  --ring: oklch(0.58 0.19 25.5);
-
-  --ink: #060607;
-  --ink-soft: #101216;
 }
 
 @layer base {

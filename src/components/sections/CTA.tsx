@@ -44,16 +44,17 @@ export function CTA() {
           <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold tracking-tight text-white leading-[1.15]">
             Pare de contratar para dar conta do volume. Comece a delegar para uma rede ranqueada por desempenho.
           </h2>
-          <p className="text-sm sm:text-base text-white/55 leading-relaxed">
+          <p className="hidden sm:block text-sm sm:text-base text-white/55 leading-relaxed">
             Em 5 minutos com um especialista, conte o volume do seu escritório e veja: quanto você economiza, qual plano cabe no seu ritmo e por que o prazo travado de 3 a 4 dias é contrato, não boa vontade. Sem aumentar a folha.
           </p>
-          <p className="text-xs text-white/35 tracking-wide">
+          <p className="hidden sm:block text-xs text-white/35 tracking-wide">
             Resposta rápida · sem compromisso · plano sob medida para o seu volume
           </p>
         </motion.div>
 
         {/* Right: form card */}
         <motion.div
+          data-own-cta
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react'
+import { Check, X } from 'lucide-react'
 
 const tableRows = [
   {
@@ -46,7 +46,8 @@ export function ComparisonTable() {
         O veredito visual, lado a lado.
       </h2>
 
-      <div className="overflow-x-auto rounded-xl border border-border shadow-sm">
+      {/* Desktop/tablet: tabela completa com as 3 colunas */}
+      <div className="hidden sm:block overflow-x-auto rounded-xl border border-border shadow-sm">
         <table className="w-full text-sm border-collapse min-w-[560px]">
           <thead>
             <tr className="border-b border-border">
@@ -68,7 +69,7 @@ export function ComparisonTable() {
                 <td className="bg-card p-4 text-muted-foreground text-xs font-medium">{row.label}</td>
                 <td className="bg-card p-4 text-muted-foreground text-xs">{row.internal}</td>
                 <td className="bg-card p-4 text-muted-foreground text-xs">{row.outsource}</td>
-                <td className="bg-emerald-50 dark:bg-emerald-950/30 p-4 text-emerald-800 dark:text-emerald-300 text-xs font-medium">
+                <td className="bg-emerald-50 p-4 text-emerald-800 text-xs font-medium">
                   <span className="flex items-start gap-1.5">
                     <Check className="w-3.5 h-3.5 flex-shrink-0 mt-px" strokeWidth={2.5} aria-hidden="true" />
                     {row.easyjur}
@@ -78,6 +79,37 @@ export function ComparisonTable() {
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Mobile: comparação dupla, lado a lado, sem a coluna de correspondente avulso */}
+      <div className="sm:hidden rounded-2xl border border-border shadow-sm overflow-hidden">
+        {/* Header fixo das duas colunas */}
+        <div className="grid grid-cols-2">
+          <div className="bg-muted text-center py-3 text-xs font-bold text-muted-foreground uppercase tracking-wide">
+            Produção interna
+          </div>
+          <div className="bg-primary text-center py-3 text-xs font-bold text-white uppercase tracking-wide">
+            EasyJur
+          </div>
+        </div>
+
+        {tableRows.map((row, i) => (
+          <div key={row.label} className={i < tableRows.length - 1 ? 'border-b border-border' : ''}>
+            <div className="bg-card px-4 pt-3 pb-1 text-xs font-semibold text-foreground text-center">
+              {row.label}
+            </div>
+            <div className="grid grid-cols-2">
+              <div className="p-4 pt-2 flex items-start gap-1.5">
+                <X className="w-3.5 h-3.5 flex-shrink-0 mt-px text-muted-foreground/50" strokeWidth={2.5} aria-hidden="true" />
+                <span className="text-xs text-muted-foreground leading-snug">{row.internal}</span>
+              </div>
+              <div className="p-4 pt-2 bg-emerald-50 flex items-start gap-1.5">
+                <Check className="w-3.5 h-3.5 flex-shrink-0 mt-px text-emerald-600" strokeWidth={2.5} aria-hidden="true" />
+                <span className="text-xs text-emerald-800 font-medium leading-snug">{row.easyjur}</span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )

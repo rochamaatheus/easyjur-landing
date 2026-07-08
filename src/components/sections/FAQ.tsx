@@ -6,7 +6,7 @@ import { EASE } from '@/lib/motion'
 const faqs = [
   {
     q: 'Como vocês conseguem cravar prazo de peça se o resto do mercado não consegue?',
-    a: 'Nosso painel define SLA por tipo de peça e distribui automaticamente para advogados verificados com histórico de entrega. Monitoramos em tempo real e acionamos backup se algum prazo estiver em risco — antes de você perceber.',
+    a: 'Nosso painel define SLA por tipo de peça e distribui automaticamente para advogados verificados com histórico de entrega. Monitoramos em tempo real e acionamos backup se algum prazo estiver em risco, antes de você perceber.',
   },
   {
     q: 'Quem produz as minhas peças?',
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Como vejo o andamento?',
-    a: 'Em tempo real pelo painel de Legal Operations. Status de cada pedido, prazo estimado, responsável e histórico completo de entregas — tudo em um lugar, sem precisar cobrar ninguém no WhatsApp.',
+    a: 'Em tempo real pelo painel de Legal Operations. Status de cada pedido, prazo estimado, responsável e histórico completo de entregas, tudo em um lugar, sem precisar cobrar ninguém no WhatsApp.',
   },
 ]
 

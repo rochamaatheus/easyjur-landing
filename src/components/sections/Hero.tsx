@@ -74,6 +74,7 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               custom={3}
+              data-own-cta
               className="flex flex-col sm:flex-row gap-3"
             >
               <motion.a

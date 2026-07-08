@@ -9,24 +9,6 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.45, delay, ease: EASE },
 })
 
-const steps = [
-  {
-    n: 1,
-    title: 'Você delega',
-    body: 'Abre a demanda na plataforma e anexa as orientações. Leva minutos.',
-  },
-  {
-    n: 2,
-    title: 'A rede produz',
-    body: 'A demanda vai para os advogados mais bem ranqueados naquele tipo de peça. Você acompanha o status em tempo real.',
-  },
-  {
-    n: 3,
-    title: 'Você recebe no prazo travado',
-    body: 'A peça chega em 3 a 4 dias, no padrão do seu escritório. Se atrasar, o crédito volta.',
-  },
-]
-
 export function Solution() {
   return (
     <section className="bg-muted py-16 px-4">
@@ -100,19 +82,19 @@ export function Solution() {
           </motion.div>
 
           {/* Card 04 — full-width */}
-          <motion.div {...fadeUp(0.24)} className="sm:col-span-3 bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-900 rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center gap-6 relative overflow-hidden">
-            <span className="absolute top-4 right-5 text-5xl font-extrabold text-emerald-600/10 select-none leading-none">04</span>
+          <motion.div {...fadeUp(0.24)} className="sm:col-span-3 bg-primary rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center gap-6 relative overflow-hidden">
+            <span className="absolute top-4 right-5 text-5xl font-extrabold text-white/10 select-none leading-none">04</span>
             <div className="flex flex-col gap-1 sm:w-40 flex-shrink-0">
-              <div aria-hidden="true" className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/60 flex items-center justify-center">
-                <TrendingDown className="w-5 h-5 text-emerald-600 dark:text-emerald-400" strokeWidth={2} />
+              <div aria-hidden="true" className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
+                <TrendingDown className="w-5 h-5 text-white" strokeWidth={2} />
               </div>
-              <p className="text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-tight mt-2">até<br />80%</p>
+              <p className="text-4xl font-extrabold text-white leading-tight mt-2">até<br />80%</p>
             </div>
             <div className="flex flex-col gap-2">
-              <h3 className="font-bold text-base text-emerald-900 dark:text-emerald-100 leading-snug pr-10">
+              <h3 className="font-bold text-base text-white leading-snug pr-10">
                 Até 80% mais barato que produzir internamente
               </h3>
-              <p className="text-sm text-emerald-800/80 dark:text-emerald-200/70 leading-relaxed">
+              <p className="text-sm text-white/75 leading-relaxed">
                 A operação de um escritório grande, pelo custo que cabe no caixa do seu. Sem folha, sem encargos,
                 sem rescisão.
               </p>
@@ -121,41 +103,18 @@ export function Solution() {
 
         </div>
 
-        {/* Como funciona — 3 passos */}
-        <div className="flex flex-col gap-6 pt-2">
-          <motion.h3
-            {...fadeUp(0)}
-            className="text-xl sm:text-2xl font-extrabold tracking-tight text-foreground leading-tight"
+        {/* CTA final */}
+        <motion.div {...fadeUp(0)} data-own-cta className="flex flex-col items-center gap-3 pt-4 text-center">
+          <motion.a
+            href="#cta"
+            whileHover={{ scale: 1.03, y: -1 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center justify-center bg-primary text-white font-semibold px-10 py-4 rounded-lg text-base hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
-            Da demanda à peça pronta, sem você sair da cadeira.
-          </motion.h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {steps.map((step, i) => (
-              <motion.div key={step.n} {...fadeUp(i * 0.07)} className="flex gap-4">
-                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">{step.n}</span>
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <h4 className="font-bold text-sm text-foreground leading-snug">{step.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div {...fadeUp(0.2)} className="flex items-center gap-4 flex-wrap">
-            <motion.a
-              href="#cta"
-              whileHover={{ scale: 1.03, y: -1 }}
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center bg-primary text-white font-semibold px-7 py-3.5 rounded-lg text-sm hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            >
-              Falar com especialista
-            </motion.a>
-            <span className="text-xs text-muted-foreground">em minutos você está delegando</span>
-          </motion.div>
-        </div>
+            Falar com especialista
+          </motion.a>
+          <span className="text-xs text-muted-foreground">em minutos você está delegando</span>
+        </motion.div>
 
       </div>
     </section>

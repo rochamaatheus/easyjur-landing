@@ -7,26 +7,26 @@ const kanbanColumns = [
   {
     label: 'A RECEBER',
     count: 23,
-    color: 'text-amber-600 dark:text-amber-400',
-    bg: 'bg-amber-50 dark:bg-amber-950/40',
+    color: 'text-amber-600',
+    bg: 'bg-amber-50',
     cards: ['Petição', 'Diligência', 'Audiência'],
-    cardColor: 'bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300',
+    cardColor: 'bg-amber-100 text-amber-700',
   },
   {
     label: 'EM PRODUÇÃO',
     count: 57,
-    color: 'text-blue-600 dark:text-blue-400',
-    bg: 'bg-blue-50 dark:bg-blue-950/40',
+    color: 'text-blue-600',
+    bg: 'bg-blue-50',
     cards: ['Petição', 'Contestação', 'Recurso'],
-    cardColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300',
+    cardColor: 'bg-blue-100 text-blue-700',
   },
   {
     label: 'ENTREGUE',
     count: 39,
-    color: 'text-emerald-600 dark:text-emerald-400',
-    bg: 'bg-emerald-50 dark:bg-emerald-950/40',
+    color: 'text-emerald-600',
+    bg: 'bg-emerald-50',
     cards: ['Petição', 'Diligência', 'Audiência'],
-    cardColor: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300',
+    cardColor: 'bg-emerald-100 text-emerald-700',
   },
 ]
 
@@ -42,7 +42,7 @@ export function HeroMedia() {
       >
         {/* 100% no prazo badge */}
         <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-card border border-border rounded-xl px-3 py-2 shadow-sm">
-          <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-100 dark:fill-emerald-900" />
+          <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-100" />
           <div className="leading-tight">
             <div className="text-sm font-extrabold text-foreground">100%</div>
             <div className="text-[10px] text-muted-foreground font-medium">no prazo</div>
@@ -50,9 +50,9 @@ export function HeroMedia() {
         </div>
 
         {/* Video placeholder */}
-        <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex flex-col items-center justify-center gap-2 min-h-[200px]">
-          <div className="w-10 h-10 rounded-full bg-white/80 dark:bg-white/10 shadow flex items-center justify-center">
-            <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-slate-600 dark:border-l-slate-300 border-b-[6px] border-b-transparent ml-0.5" />
+        <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 flex flex-col items-center justify-center gap-2 min-h-[200px]">
+          <div className="w-10 h-10 rounded-full bg-white/80 shadow flex items-center justify-center">
+            <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-slate-600 border-b-[6px] border-b-transparent ml-0.5" />
           </div>
           <p className="text-xs text-muted-foreground font-medium px-8 text-center">
             Vídeo 30 a 60s · autoplay mudo
@@ -60,12 +60,12 @@ export function HeroMedia() {
         </div>
       </motion.div>
 
-      {/* Kanban card */}
+      {/* Kanban card — oculto no mobile: pendente acesso à tela real ou vídeo para substituir por prova em formato mobile-friendly */}
       <motion.div
         initial={{ opacity: 0, x: 20, y: 15 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.6, delay: 0.45, ease: EASE }}
-        className="rounded-2xl border border-border bg-card shadow-xl shadow-black/5 overflow-hidden"
+        className="hidden sm:block rounded-2xl border border-border bg-card shadow-xl shadow-black/5 overflow-hidden"
       >
         {/* Browser chrome */}
         <div className="flex items-center gap-1.5 px-3 py-2.5 border-b border-border bg-muted/60">

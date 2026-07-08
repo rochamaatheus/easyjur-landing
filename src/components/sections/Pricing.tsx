@@ -63,7 +63,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div data-own-cta className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -74,7 +74,7 @@ export function Pricing() {
               className={cn(
                 'relative bg-card rounded-2xl border flex flex-col gap-5 overflow-hidden shadow-sm',
                 plan.featured
-                  ? 'border-2 border-primary shadow-lg shadow-primary/10 pt-14 px-6 pb-6'
+                  ? 'order-first sm:order-none border-2 border-primary shadow-lg shadow-primary/10 pt-14 px-6 pb-6'
                   : 'border-border p-6'
               )}
             >
@@ -124,19 +124,12 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.45, ease: EASE }}
-          className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-900 rounded-2xl p-6 flex items-start gap-5"
+          className="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 flex items-center gap-5"
         >
-          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/60 flex items-center justify-center">
-            <ShieldCheck className="w-6 h-6 text-emerald-600 dark:text-emerald-400" strokeWidth={2} />
+          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center">
+            <ShieldCheck className="w-6 h-6 text-emerald-600" strokeWidth={2} />
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-extrabold text-lg text-emerald-900 dark:text-emerald-100">Se atrasar, o crédito volta.</h3>
-            <p className="text-sm text-emerald-800/80 dark:text-emerald-200/70 leading-relaxed">
-              <strong className="text-emerald-900 dark:text-emerald-100">SLA travado em contrato.</strong> Você nunca paga
-              por atraso: se a demanda passar do prazo de 3 a 4 dias, o crédito retorna para a sua conta. É o que torna o
-              "100% no prazo" testável, não só publicidade.
-            </p>
-          </div>
+          <h3 className="font-extrabold text-lg text-emerald-900">Se atrasar, o crédito volta.</h3>
         </motion.div>
 
       </div>
