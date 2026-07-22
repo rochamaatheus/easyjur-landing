@@ -11,13 +11,13 @@ const tableRows = [
     label: 'Prazo',
     internal: 'Depende da agenda da equipe',
     outsource: '"Quando der"',
-    easyjur: 'SLA travado 3 a 4 dias',
+    easyjur: 'SLA por tipo: triagem em até 4h, minuta em até 48h',
   },
   {
     label: 'Quem produz',
     internal: 'Seu time (e o limite dele)',
     outsource: 'Quem aparecer no WhatsApp',
-    easyjur: 'Rede ranqueada, você vê o desempenho de cada um na plataforma',
+    easyjur: 'Time próprio da EasyJur, rastreável na plataforma',
   },
   {
     label: 'Controle',
@@ -59,7 +59,7 @@ export function ComparisonTable() {
                 Correspondente avulso (WhatsApp)
               </th>
               <th className="bg-primary text-left p-4 font-semibold text-white rounded-t-lg w-[26%]">
-                EasyJur Legal Operations
+                EasyJur
               </th>
             </tr>
           </thead>

@@ -54,7 +54,7 @@ export function Navbar() {
       <header className="hidden sm:block sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <a href="#" aria-label="EasyJur, Legal Operations, voltar ao topo" className="flex items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+            <a href="#" aria-label="EasyJur, Sistema Operacional do Trabalho Jurídico, voltar ao topo" className="flex items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
               <img
                 src="./logo-easyjur.svg"
                 alt="EasyJur"
@@ -62,8 +62,8 @@ export function Navbar() {
                 height={28}
                 className="h-7 w-auto"
               />
-              <span className="hidden sm:inline-block border-l border-border pl-3 text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
-                Legal Operations
+              <span className="hidden lg:inline-block border-l border-border pl-3 text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
+                Sistema Operacional do Trabalho Jurídico
               </span>
             </a>
 

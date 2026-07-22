@@ -14,7 +14,7 @@ export function Footer() {
               height={32}
               className="h-8 w-auto self-start"
             />
-            <div className="text-[10px] font-semibold tracking-widest text-white/40 uppercase">Legal Operations</div>
+            <div className="text-[10px] font-semibold tracking-widest text-white/40 uppercase">Sistema Operacional do Trabalho Jurídico</div>
           </div>
 
           {/* Nav links */}

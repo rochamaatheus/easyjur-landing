@@ -6,11 +6,11 @@ import { EASE } from '@/lib/motion'
 const faqs = [
   {
     q: 'Como vocês conseguem cravar prazo de peça se o resto do mercado não consegue?',
-    a: 'Nosso painel define SLA por tipo de peça e distribui automaticamente para advogados verificados com histórico de entrega. Monitoramos em tempo real e acionamos backup se algum prazo estiver em risco, antes de você perceber.',
+    a: 'Cada tipo de demanda tem um SLA definido — triagem em até 4h, minuta em até 48h — e a distribuição é automática dentro do nosso time próprio. Monitoramos em tempo real e acionamos backup interno se algum prazo estiver em risco, antes de você perceber.',
   },
   {
     q: 'Quem produz as minhas peças?',
-    a: 'Advogados com OAB ativa, perfil verificado e avaliação baseada em histórico de entregas na plataforma. Você acompanha o responsável por cada pedido e pode avaliar a entrega.',
+    a: 'O time próprio da EasyJur: advogados e engenheiros jurídicos com OAB ativa, integrados ao seu escritório. Você acompanha o responsável por cada pedido e o histórico de entregas na plataforma.',
   },
   {
     q: 'E a qualidade?',
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     q: 'E se meu volume crescer?',
-    a: 'Upgrade de plano a qualquer momento, sem fila de espera. Nossa rede de advogados escala com a sua demanda — você não fica limitado por headcount interno.',
+    a: 'Upgrade de plano a qualquer momento, sem fila de espera. Nosso time próprio escala com a sua demanda — você não fica limitado pelo headcount do seu escritório.',
   },
   {
     q: 'Como vejo o andamento?',
-    a: 'Em tempo real pelo painel de Legal Operations. Status de cada pedido, prazo estimado, responsável e histórico completo de entregas, tudo em um lugar, sem precisar cobrar ninguém no WhatsApp.',
+    a: 'Em tempo real pelo painel da EasyJur. Status de cada pedido, prazo estimado, responsável e histórico completo de entregas, tudo em um lugar, sem precisar cobrar ninguém no WhatsApp.',
   },
 ]
 

@@ -25,7 +25,7 @@ const stats = [
     target: 100,
     prefix: '',
     suffix: '%',
-    label: 'das demandas dentro do SLA de 3 a 4 dias',
+    label: 'das demandas dentro do SLA contratado por tipo',
     note: 'medido nas últimas 200.000 entregas',
     accent: 'border-t-emerald-500',
     valueColor: 'text-emerald-500',

@@ -1,36 +1,35 @@
 import { motion } from 'framer-motion'
-import { ShieldCheck } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { EASE } from '@/lib/motion'
 
 const plans = [
   {
-    name: 'Start',
-    volume: '30 demandas / mês',
+    name: 'START',
+    volume: '30 créditos / mês',
     price: 'R$ 1.800',
     note: null,
     description: 'Para começar a tirar o operacional das suas costas.',
     featured: false,
   },
   {
-    name: 'Start Plus',
-    volume: '60 demandas / mês',
+    name: 'PREMIUM',
+    volume: '60 créditos / mês',
     price: 'R$ 3.000',
     note: null,
     description: 'Para o escritório que já delega e quer constância.',
     featured: false,
   },
   {
-    name: 'Premium',
-    volume: '120 demandas / mês',
+    name: 'STANDARD',
+    volume: '120 créditos / mês',
     price: 'R$ 5.400',
     note: null,
-    description: 'O melhor custo por demanda, escolha da maioria.',
+    description: 'O melhor custo por crédito, escolha da maioria.',
     featured: true,
   },
   {
-    name: 'Standard',
-    volume: '200 demandas / mês',
+    name: 'GROWTH',
+    volume: '200 créditos / mês',
     price: 'R$ 8.000',
     note: '+ setup no 1° mês',
     description: 'Para operações de alto volume que precisam de escala.',
@@ -57,7 +56,7 @@ export function Pricing() {
           {/* Credit info box */}
           <div className="mt-2 bg-card border border-border rounded-xl px-6 py-4 max-w-lg text-sm text-center text-muted-foreground leading-relaxed">
             <span className="text-primary font-semibold">Cada crédito = uma demanda</span>
-            {' '}(uma petição, uma audiência ou uma diligência). Você escolhe o volume e a operação
+            {' '}(uma petição, uma audiência ou uma diligência). Você escolhe o volume de créditos e a operação
             acompanha o ritmo do seu escritório.
           </div>
         </div>
@@ -81,7 +80,7 @@ export function Pricing() {
               {/* Featured badge */}
               {plan.featured && (
                 <div className="absolute top-0 left-0 right-0 bg-primary text-white text-[10px] font-bold text-center px-4 py-3 leading-snug">
-                  O mais escolhido · melhor custo por demanda
+                  O mais escolhido · melhor custo por crédito
                 </div>
               )}
 
@@ -117,20 +116,6 @@ export function Pricing() {
             </motion.div>
           ))}
         </div>
-
-        {/* Guarantee callout */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.45, ease: EASE }}
-          className="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 flex items-center gap-5"
-        >
-          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center">
-            <ShieldCheck className="w-6 h-6 text-emerald-600" strokeWidth={2} />
-          </div>
-          <h3 className="font-extrabold text-lg text-emerald-900">Se atrasar, o crédito volta.</h3>
-        </motion.div>
 
       </div>
     </section>

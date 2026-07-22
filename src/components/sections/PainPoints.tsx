@@ -71,7 +71,7 @@ export function PainPoints() {
           <CornerDownRight className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
           <p className="text-sm sm:text-base text-emerald-900 leading-relaxed font-medium">
             Agora imagine esse volume entregue no prazo, no seu padrão, sem um nome novo na folha,
-            cada peça nas mãos de um advogado ranqueado, não de um desconhecido do WhatsApp.
+            cada peça nas mãos do time próprio da EasyJur, não de um desconhecido do WhatsApp.
           </p>
         </motion.div>
 

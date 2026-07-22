@@ -33,7 +33,7 @@ export function Hero() {
             >
               <div className="w-6 h-[2px] bg-primary" />
               <span className="text-primary font-semibold text-xs tracking-widest uppercase">
-                Legal Operations
+                Sistema Operacional do Trabalho Jurídico
               </span>
             </motion.div>
 
@@ -45,24 +45,35 @@ export function Hero() {
               custom={1}
               className="text-[2.6rem] sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] tracking-tight text-foreground"
             >
-              Toda peça do seu escritório entregue em{' '}
-              <span className="text-primary">3 a 4 dias</span>, com o prazo
-              travado em contrato.
+              Toda peça do seu escritório, com{' '}
+              <span className="text-primary">SLA travado em contrato</span>:
+              triagem em até 4h, minuta em até 48h.
             </motion.h1>
+
+            {/* Tagline */}
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              custom={2}
+              className="text-sm font-semibold text-primary tracking-tight"
+            >
+              Advogado comanda. IA executa. Pessoas cobrem o resto.
+            </motion.p>
 
             {/* Body text */}
             <motion.p
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={2}
+              custom={3}
               className="text-muted-foreground text-base leading-relaxed max-w-lg"
             >
-              Petições, audiências e diligências entregues por uma{' '}
+              Petições, audiências e diligências entregues pelo{' '}
               <strong className="text-foreground font-semibold">
-                rede de advogados ranqueada por desempenho
+                time próprio de advogados e engenheiros jurídicos da EasyJur
               </strong>
-              , cada demanda rastreável na plataforma, por{' '}
+              , integrado ao seu escritório e rastreável na plataforma, por{' '}
               <span className="text-primary font-semibold">até 80% menos</span>{' '}
               do que produzir dentro de casa. Você delega o operacional e volta
               a advogar.
@@ -73,7 +84,7 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={3}
+              custom={4}
               data-own-cta
               className="flex flex-col sm:flex-row gap-3"
             >
@@ -106,7 +117,7 @@ export function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              custom={4}
+              custom={5}
               className="flex items-center gap-1.5 pt-1"
             >
               {Array.from({ length: 5 }).map((_, i) => (

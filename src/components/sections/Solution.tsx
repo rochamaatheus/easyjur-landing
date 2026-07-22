@@ -24,9 +24,10 @@ export function Solution() {
             Não é correspondente avulso. É a sua operação jurídica inteira, só que você não precisa contratá-la.
           </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Como a EasyJur entrega 100% das demandas no prazo? Pelo{' '}
-            <strong className="text-foreground">Ranqueamento por Desempenho</strong>: cada peça vai para o
-            advogado com a melhor nota naquele tipo de demanda. É por isso que o prazo é contrato, não promessa.
+            Como a EasyJur entrega 100% das demandas no prazo? Com{' '}
+            <strong className="text-foreground">time próprio</strong>: advogados e engenheiros jurídicos da
+            EasyJur, integrados ao seu escritório, com SLA definido por tipo de demanda. É por isso que o prazo
+            é contrato, não promessa.
           </p>
         </div>
 
@@ -40,10 +41,10 @@ export function Solution() {
               <Target className="w-5 h-5 text-primary" strokeWidth={2} />
             </div>
             <div className="flex flex-col gap-2">
-              <h3 className="font-bold text-base text-foreground leading-snug pr-10">Ranqueamento por Desempenho</h3>
+              <h3 className="font-bold text-base text-foreground leading-snug pr-10">Time próprio, não terceirizado</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Sua peça não vai para quem está livre. Vai para o advogado com a melhor nota naquele tipo de
-                demanda, medida pela qualidade e pontualidade das entregas anteriores.
+                Sua peça não vai para um correspondente avulso. Vai para um advogado ou engenheiro jurídico do
+                time da EasyJur, integrado ao seu escritório e ao seu padrão de trabalho.
               </p>
             </div>
           </motion.div>
@@ -56,12 +57,11 @@ export function Solution() {
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="font-bold text-base text-foreground leading-snug pr-10">
-                SLA travado de 3 a 4 dias
+                SLA por tipo de demanda
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Cada tipo de peça tem um prazo medido em +200.000 entregas. Sempre há mais de um profissional
-                habilitado na fila: se um trava, outro assume, sem reiniciar o relógio.{' '}
-                <strong className="text-foreground">Se atrasar, o crédito volta para você.</strong>
+                Triagem em até 4h, minuta em até 48h — prazos medidos em +200.000 entregas. Sempre há mais de
+                um profissional habilitado na fila: se um trava, outro assume, sem reiniciar o relógio.
               </p>
             </div>
           </motion.div>

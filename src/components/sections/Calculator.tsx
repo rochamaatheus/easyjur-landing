@@ -63,7 +63,7 @@ export function Calculator() {
   const totalInternal = demands * costPerPiece
   const savingsHigh = Math.round(totalInternal * 0.8)
   const suggestedPlan =
-    demands <= 30 ? 'Start' : demands <= 60 ? 'Start Plus' : demands <= 120 ? 'Premium' : 'Standard'
+    demands <= 30 ? 'START' : demands <= 60 ? 'PREMIUM' : demands <= 120 ? 'STANDARD' : 'GROWTH'
 
   return (
     <section className="bg-background py-16 px-4 scroll-mt-20" id="calculadora">
